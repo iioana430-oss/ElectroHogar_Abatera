@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ElectroHogar-2-Mano</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    header {
+      background: #1f6feb;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #1f6feb;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 12px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 45px 20px;
+      background: #eaf2ff;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .boton {
+      display: inline-block;
+      background: #1f6feb;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .productos {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .productos h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .producto .icono {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .producto h3 {
+      margin-bottom: 10px;
+    }
+
+    .precio {
+      color: #1f6feb;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .contacto {
+      background: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      margin-bottom: 15px;
+    }
+
+    .contacto p {
+      margin: 10px;
+    }
+
+    footer {
+      background: #172033;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .hero h2 {
+        font-size: 26px;
+      }
+
+      nav a {
+        margin: 0 5px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>ElectroHogar-2-Mano</h1>
+    <p>Electrodomésticos de segunda mano</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <h2>Electrodomésticos a buen precio</h2>
+    <p>Encuentra productos de segunda mano revisados y listos para usar.</p>
+    <a href="#productos" class="boton">Ver productos</a>
+  </section>
+
+  <section class="productos" id="productos">
+    <h2>Productos disponibles</h2>
+
+    <div class="grid">
+
+      <div class="producto">
+        <div class="icono">🧊</div>
+        <h3>Frigorífico</h3>
+        <p>Frigorífico de segunda mano en buen estado.</p>
+        <div class="precio">150 €</div>
+        <button class="boton" onclick="contactar('Frigorífico')">
+          Me interesa
+        </button>
+      </div>
+
+      <div class="producto">
+        <div class="icono">🧺</div>
+        <h3>Lavadora</h3>
+        <p>Lavadora revisada y funcionando correctamente.</p>
+        <div class="precio">120 €</div>
+        <button class="boton" onclick="contactar('Lavadora')">
+          Me interesa
+        </button>
+      </div>
+
+      <div class="producto">
+        <div class="icono">🔥</div>
+        <h3>Horno</h3>
+        <p>Horno usado en buen estado.</p>
+        <div class="precio">90 €</div>
+        <button class="boton" onclick="contactar('Horno')">
+          Me interesa
+        </button>
+      </div>
+
+      <div class="producto">
+        <div class="icono">🍽️</div>
+        <h3>Lavavajillas</h3>
+        <p>Lavavajillas de segunda mano revisado.</p>
+        <div class="precio">130 €</div>
+        <button class="boton" onclick="contactar('Lavavajillas')">
+          Me interesa
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>¿Quieres comprar algún producto?</h2>
+    <p>Contacta con nosotros para consultar disponibilidad.</p>
+    <p><strong>Email:</strong> electrohogar2mano@gmail.com</p>
+    <br>
+    <button class="boton" onclick="contactar('producto')">
+      Contactar
+    </button>
+  </section>
+
+  <footer>
+    <p>©️ 2026 ElectroHogar-2-Mano</p>
+    <p>Venta de electrodomésticos de segunda mano</p>
+  </footer>
+
+  <script>
+    function contactar(producto) {
+      const mensaje =
+        "Hola, estoy interesado/a en " + producto + ".";
+
+      window.location.href =
+        "mailto:electrohogar2mano@gmail.com?subject=Consulta&body="
+        + encodeURIComponent(mensaje);
+    }
+  </script>
+
+</body>
+</html>
